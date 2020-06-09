@@ -1,0 +1,453 @@
+
+    html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+    }
+    body {
+        margin: 0;
+    }
+    main {
+        display: block;
+    }
+    h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+    }
+    hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+    }
+    pre {
+        font-family: monospace, monospace;
+        font-size: 1em;
+    }
+    a {
+        background-color: transparent;
+    }
+    abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        text-decoration: underline dotted;
+    }
+    b,
+    strong {
+        font-weight: bolder;
+    }
+    code,
+    kbd,
+    samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+    }
+    small {
+        font-size: 80%;
+    }
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+    sub {
+        bottom: -0.25em;
+    }
+    sup {
+        top: -0.5em;
+    }
+    img {
+        border-style: none;
+    }
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+    }
+    button,
+    input {
+        overflow: visible;
+    }
+    button,
+    select {
+        text-transform: none;
+    }
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+        -webkit-appearance: button;
+    }
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+    }
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+    }
+    fieldset {
+        padding: 0.35em 0.75em 0.625em;
+    }
+    legend {
+        box-sizing: border-box;
+        color: inherit;
+        display: table;
+        max-width: 100%;
+        padding: 0;
+        white-space: normal;
+    }
+    progress {
+        vertical-align: baseline;
+    }
+    textarea {
+        overflow: auto;
+    }
+    [type="checkbox"],
+    [type="radio"] {
+        box-sizing: border-box;
+        padding: 0;
+    }
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+    }
+    [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+    }
+    [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+    ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+    }
+    details {
+        display: block;
+    }
+    summary {
+        display: list-item;
+    }
+    template {
+        display: none;
+    }
+    [hidden] {
+        display: none;
+	}
+	@font-face {
+		font-family: 'CircularStdBlack';
+		src: url('./assets/fonts/CircularStd-Black.woff2') format('woff2'),
+			url('./assets/fonts/CircularStd-Black.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'CircularStdBold';
+		src: url('./assets/fonts/CircularStd-Bold.woff2') format('woff2'),
+			url('./assets/fonts/CircularStd-Bold.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'CircularStdMedium';
+		src: url('./assets/fonts/CircularStd-Medium.woff2') format('woff2'),
+			url('./assets/fonts/CircularStd-Medium.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'CircularStdBook';
+		src: url('./assets/fonts/CircularStd-Book.woff2') format('woff2'),
+			url('./assets/fonts/CircularStd-Book.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'jira';
+		src: url('./assets/fonts/jira.woff') format('truetype'),
+			url('./assets/fonts/jira.ttf') format('woff'), url('./assets/fonts/jira.svg#jira') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	html, body, #root {
+        height: 100%;
+        min-height: 100%;
+        min-width: 768px;
+    }
+
+    body {
+        color: var(--color-textDarkest);
+        -webkit-tap-highlight-color: transparent;
+        line-height: 1.2;
+        font-size:16px;
+        font-family: CircularStdBook;
+        font-weight: normal;
+    }
+
+    #root {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font:var(--font-regular)
+    }
+
+    *, *:after, *:before, input[type="search"] {
+        box-sizing: border-box;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    ul, li, ol, dd, h1, h2, h3, h4, h5, h6, p {
+        padding: 0;
+        margin: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6, strong {
+        font:var(--font-bold)
+    }
+
+    button {
+        background: none;
+        border: none;
+    }
+
+    /* Workaround for IE11 focus highlighting for select elements */
+    select::-ms-value {
+        background: none;
+        color: #42413d;
+    }
+
+    [role="button"], button, input, select, textarea {
+        outline: none;
+    }
+    [role="button"]:focus, button:focus, input:focus, select:focus, textarea:focus {
+        outline: none;
+    }
+    [role="button"]:disabled, button:disabled, input:disabled, select:disabled, textarea:disabled {
+        outline: none;
+    }
+    [role="button"], button, input, textarea {
+        appearance: none;
+    }
+    select:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    select option {
+        color: var(--color-textDarkest);
+    }
+
+    p {
+        line-height: 1.4285;
+        
+    }
+    p a {
+        @include link();
+    }
+    textarea {
+        line-height: 1.4285;
+    }
+
+    body, select {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+        touch-action: manipulation;
+    }
+
+    :root {
+        --color-primary: #0052cc;
+        --color-success: #0B875B;
+        --color-danger: #E13C3C;
+        --color-warning: #F89C1C;
+        --color-secondary: #F4F5F7;
+        --color-textDarkest: #172b4d;
+        --color-textDark: #42526E;
+        --color-textMedium: #5E6C84;
+        --color-textLight: #8993a4;
+        --color-textLink: #0052cc;
+        --color-backgroundDarkPrimary: #0747A6;
+        --color-backgroundMedium: #dfe1e6;
+        --color-backgroundLight: #ebecf0;
+        --color-backgroundLightest: #F4F5F7;
+        --color-backgroundLightPrimary: #D2E5FE;
+        --color-backgroundLightSuccess: #E4FCEF;
+        --color-borderLightest: #dfe1e6;
+        --color-borderLight: #C1C7D0;
+        --color-borderInputFocus: #4c9aff;
+      
+        --issueTypeColors-IssueType-BUG:#E44D42;
+        --issueTypeColors-IssueType-TASK:#4FADE6;
+        --issueTypeColors-IssueType-STORY:#65BA43;
+        --color-bug:#E44D42;
+        --color-task:#4FADE6;
+        --color-story:#65BA43;
+
+        --color-5:#CD1317;
+        --color-4:#E9494A;
+        --color-3:#E97F33;
+        --color-2:#2D8738;
+        --color-1:#57A55A;
+        --issuePriorityColors-IssuePriority-HIGHEST:#CD1317;
+        --issuePriorityColors-IssuePriority-HIGH:   #E9494A;
+        --issuePriorityColors-IssuePriority-MEDIUM: #E97F33;
+        --issuePriorityColors-IssuePriority-LOW:    #2D8738;
+        --issuePriorityColors-IssuePriority-LOWEST: #57A55A;
+        
+        --issueStatusColors-IssueStatus-BACKLOG: var(--color-textDark);
+        --issueStatusColors-IssueStatus-INPROGRESS: #fff;
+        --issueStatusColors-IssueStatus-SELECTED: var(--color-textDark);
+        --issueStatusColors-IssueStatus-DONE: #fff;
+        
+        --issueStatusBackgroundColors-IssueStatus-BACKLOG: var(--color-backgroundMedium);
+        --issueStatusBackgroundColors-IssueStatus-INPROGRESS: var(--color-primary);
+        --issueStatusBackgroundColors-IssueStatus-SELECTED: var(--color-backgroundMedium);
+        --issueStatusBackgroundColors-IssueStatus-DONE: var(--color-success);
+      
+        --sizes-appNavBarLeftWidth: 64px;
+        --sizes-secondarySideBarWidth: 230px;
+        --sizes-minViewportWidth: 1000px;
+      
+        --zIndexValues-modal: 1000;
+        --zIndexValues-dropdown: 101;
+        --zIndexValues-navLeft: 100;
+        
+        --font-regular: font-family: "CircularStdBook"; font-weight: normal;
+        --font-medium: font-family: "CircularStdMedium"; font-weight: normal;
+        --font-bold: font-family: "CircularStdBold"; font-weight: normal;
+        --font-black: font-family: "CircularStdBlack"; font-weight: normal;
+
+        --paddingLeft:334px;
+      };
+      
+      @mixin darken ($colorValue, $amount) {
+          
+      }
+      @mixin lighten (colorValue, amount) {
+      }
+      @mixin rgba ($colorValue, $opacity) {
+            
+      }
+      @mixin boxShadowMedium {
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      }
+      @mixin boxShadowDropdown{
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
+      }
+        @mixin truncateText{
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        @mixin clickable{
+          cursor: pointer;
+          user-select: none;
+        }
+        @mixin hardwareAccelerate{
+          transform: translateZ(0);
+      }
+        @mixin cover {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+        @mixin placeholderColor($colorValue){
+          ::-webkit-input-placeholder {
+            color: $colorValue !important;
+            opacity: 1 !important;
+          }
+          :-moz-placeholder {
+            color: $colorValue !important;
+            opacity: 1 !important;
+          }
+          ::-moz-placeholder {
+            color: $colorValue !important;
+            opacity: 1 !important;
+          }
+          :-ms-input-placeholder {
+            color: $colorValue !important;
+            opacity: 1 !important;
+          }
+      }
+        @mixin scrollableY{
+          overflow-x: hidden;
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        @mixin customScrollbar( $width : 8px, $background : var(--color-backgroundMedium)){
+          &::-webkit-scrollbar {
+            width: $width;
+          }
+          &::-webkit-scrollbar-track {
+            background: none;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 99px;
+            background: $background;
+          }
+      }
+        @mixin backgroundImage($imageURL){
+          background-image: url($imageURL);
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: var(--color-backgroundLight);
+        }
+        @mixin link ($colorValue : var(--color-textLink)){
+          cursor: pointer;
+          color: $colorValue;
+          font:var(--font-medium);
+          &:hover, &:visited, &:active {
+            color: $colorValue;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+      }
+        @mixin tag ($background : var(--color-backgroundMedium), $colorValue : var(--color-textDarkest)){
+          display: inline-flex;
+          align-items: center;
+          height: 24px;
+          padding: 0 8px;
+          border-radius: 4px;
+          cursor: pointer;
+          user-select: none;
+          color: colorValue;
+          background: $background;
+          font:var(--font-bold);
+          font-size:12px;
+          i {
+            margin-left: 4px;
+          }
+      }

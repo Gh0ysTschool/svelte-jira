@@ -1,0 +1,1 @@
+export { default as StyledDate } from './StyledDate.svelte';
